@@ -1,7 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
+import moviesData from '../data/sampledata';
+import MovieList from './movielist';
 
-class App extends React.Component {
+const App extends React.Component {
   render() {
     return <p> Hello React!</p>;
   }
