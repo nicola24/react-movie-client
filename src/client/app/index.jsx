@@ -8,6 +8,7 @@ class App extends React.Component {
     super();
     this.state = {
       value: '',
+      movies: moviesData
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -27,7 +28,7 @@ class App extends React.Component {
           <input type="submit" value="Submit" />
         </div>
         <div>
-          <MovieList movielist={moviesData} />
+          <MovieList movielist={this.state.movies} searchTerm={this.state.value} />
         </div>
       </div>
     );

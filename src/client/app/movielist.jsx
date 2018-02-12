@@ -1,10 +1,9 @@
 import React from 'react';
 import SingleMovie from './singlemovie.jsx';
 
-const MovieList = props => (
+const MovieList = ({ movielist, searchTerm }) => (
   <div>
-    {props.movielist.map(x =>
-      <SingleMovie movie={x} />)}
+    {movielist.filter(m => m.title.toLowerCase().includes(searchTerm.toLowerCase())).map(x => <SingleMovie movie={x} />)}
   </div>
 );
 
